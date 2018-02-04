@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcCoreOverview", "MvcCoreO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Razor", "Razor\Razor.csproj", "{EF37E5B2-B0DD-4399-948F-A4E56BAB3E9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing", "Routing\Routing.csproj", "{7D6F18A5-1010-4F1A-A777-B4AAA8E06F85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{EF37E5B2-B0DD-4399-948F-A4E56BAB3E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF37E5B2-B0DD-4399-948F-A4E56BAB3E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF37E5B2-B0DD-4399-948F-A4E56BAB3E9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D6F18A5-1010-4F1A-A777-B4AAA8E06F85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D6F18A5-1010-4F1A-A777-B4AAA8E06F85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D6F18A5-1010-4F1A-A777-B4AAA8E06F85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D6F18A5-1010-4F1A-A777-B4AAA8E06F85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

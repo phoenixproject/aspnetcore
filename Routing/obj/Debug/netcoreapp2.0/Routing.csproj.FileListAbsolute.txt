@@ -1,0 +1,11 @@
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Routing\bin\Debug\netcoreapp2.0\Routing.deps.json
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Routing\bin\Debug\netcoreapp2.0\Routing.runtimeconfig.json
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Routing\bin\Debug\netcoreapp2.0\Routing.runtimeconfig.dev.json
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Routing\bin\Debug\netcoreapp2.0\Routing.dll
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Routing\bin\Debug\netcoreapp2.0\Routing.pdb
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Routing\obj\Debug\netcoreapp2.0\Routing.csprojResolveAssemblyReference.cache
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Routing\obj\Debug\netcoreapp2.0\Routing.csproj.CoreCompileInputs.cache
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Routing\obj\Debug\netcoreapp2.0\Routing.AssemblyInfoInputs.cache
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Routing\obj\Debug\netcoreapp2.0\Routing.AssemblyInfo.cs
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Routing\obj\Debug\netcoreapp2.0\Routing.dll
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Routing\obj\Debug\netcoreapp2.0\Routing.pdb
