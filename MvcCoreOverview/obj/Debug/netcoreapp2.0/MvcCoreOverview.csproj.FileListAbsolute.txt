@@ -1,0 +1,11 @@
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\MvcCoreOverview\MvcCoreOverview\bin\Debug\netcoreapp2.0\MvcCoreOverview.deps.json
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\MvcCoreOverview\MvcCoreOverview\bin\Debug\netcoreapp2.0\MvcCoreOverview.runtimeconfig.json
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\MvcCoreOverview\MvcCoreOverview\bin\Debug\netcoreapp2.0\MvcCoreOverview.runtimeconfig.dev.json
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\MvcCoreOverview\MvcCoreOverview\bin\Debug\netcoreapp2.0\MvcCoreOverview.dll
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\MvcCoreOverview\MvcCoreOverview\bin\Debug\netcoreapp2.0\MvcCoreOverview.pdb
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\MvcCoreOverview\MvcCoreOverview\obj\Debug\netcoreapp2.0\MvcCoreOverview.csprojResolveAssemblyReference.cache
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\MvcCoreOverview\MvcCoreOverview\obj\Debug\netcoreapp2.0\MvcCoreOverview.csproj.CoreCompileInputs.cache
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\MvcCoreOverview\MvcCoreOverview\obj\Debug\netcoreapp2.0\MvcCoreOverview.AssemblyInfoInputs.cache
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\MvcCoreOverview\MvcCoreOverview\obj\Debug\netcoreapp2.0\MvcCoreOverview.AssemblyInfo.cs
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\MvcCoreOverview\MvcCoreOverview\obj\Debug\netcoreapp2.0\MvcCoreOverview.dll
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\MvcCoreOverview\MvcCoreOverview\obj\Debug\netcoreapp2.0\MvcCoreOverview.pdb
