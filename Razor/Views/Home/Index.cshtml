@@ -1,0 +1,70 @@
+﻿@model Razor.Models.Product
+
+@{
+	Layout = null;
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body>
+
+	<div class="container">
+
+		<br />
+		<br />
+
+		@Model.Name
+
+		<hr />
+
+		<p><b>Name:</b> @Model.Name</p>
+		<p><b>Price:</b> @($"{Model.Price:C2}")</p>
+
+		<p><b>Qty:</b> @ViewBag.Qty</p>
+
+		<hr />
+
+		<div data-id="@Model.ID" class="@Model.Name">HTML</div>
+
+		<hr />
+
+		@if (ViewBag.Qty < 3)
+		{
+			@: Quantity is below 4.
+		}
+		else if (ViewBag.Qty == 4)
+		{
+			@: Quantity is @ViewBag.Qty
+		}
+		else
+		{
+			@: Quantity is above 4.
+		}
+
+		<br />
+
+		@switch (ViewBag.Qty)
+		{
+			case 0:
+			case 1:
+			case 2:
+			case 3:
+				@: Quantity is below 4.
+				break;
+			case 4:
+				@: Quantity is @ViewBag.Qty
+				break;
+			default:
+				@: Quantity is above 4.
+				break;
+		}
+
+	</div>
+
+</body>
+
+</html>

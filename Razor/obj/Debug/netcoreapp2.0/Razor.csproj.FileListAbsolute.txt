@@ -1,0 +1,11 @@
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Razor\obj\Debug\netcoreapp2.0\Razor.csprojResolveAssemblyReference.cache
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Razor\obj\Debug\netcoreapp2.0\Razor.csproj.CoreCompileInputs.cache
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Razor\obj\Debug\netcoreapp2.0\Razor.AssemblyInfoInputs.cache
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Razor\obj\Debug\netcoreapp2.0\Razor.AssemblyInfo.cs
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Razor\bin\Debug\netcoreapp2.0\Razor.deps.json
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Razor\bin\Debug\netcoreapp2.0\Razor.runtimeconfig.json
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Razor\bin\Debug\netcoreapp2.0\Razor.runtimeconfig.dev.json
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Razor\bin\Debug\netcoreapp2.0\Razor.dll
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Razor\bin\Debug\netcoreapp2.0\Razor.pdb
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Razor\obj\Debug\netcoreapp2.0\Razor.dll
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Razor\obj\Debug\netcoreapp2.0\Razor.pdb

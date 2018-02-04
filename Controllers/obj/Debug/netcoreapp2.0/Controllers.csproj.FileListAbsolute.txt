@@ -1,0 +1,11 @@
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Controllers\bin\Debug\netcoreapp2.0\Controllers.deps.json
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Controllers\bin\Debug\netcoreapp2.0\Controllers.runtimeconfig.json
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Controllers\bin\Debug\netcoreapp2.0\Controllers.runtimeconfig.dev.json
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Controllers\bin\Debug\netcoreapp2.0\Controllers.dll
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Controllers\bin\Debug\netcoreapp2.0\Controllers.pdb
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Controllers\obj\Debug\netcoreapp2.0\Controllers.csprojResolveAssemblyReference.cache
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Controllers\obj\Debug\netcoreapp2.0\Controllers.csproj.CoreCompileInputs.cache
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Controllers\obj\Debug\netcoreapp2.0\Controllers.AssemblyInfoInputs.cache
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Controllers\obj\Debug\netcoreapp2.0\Controllers.AssemblyInfo.cs
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Controllers\obj\Debug\netcoreapp2.0\Controllers.dll
+D:\_BASE\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\Controllers\obj\Debug\netcoreapp2.0\Controllers.pdb
