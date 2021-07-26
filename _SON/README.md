@@ -1,11 +1,11 @@
+### Asp Net Core (DotNet Core 5 ou Dot Net)
+
 ##### [Sintaxe básica de escrita e formatação no GitHub](https://docs.github.com/pt/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)<br/>
 ##### [Criar e realçar blocos de código](https://docs.github.com/pt/github/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks)<br/>
 
-## Asp Net Core (DotNet Core 5 ou Dot Net)
+#### [Exemplos do aplicativo em console](https://github.com/phoenixproject/aspnetcore/tree/master/_SON/_CONSOLE)<br/>
 
-### [Exemplos do aplicativo em console](https://github.com/phoenixproject/aspnetcore/tree/master/_SON/_CONSOLE)<br/>
-
-### [Exemplos do aplicado em Asp Net Core](https://github.com/phoenixproject/aspnetcore/tree/master/_SON/_ASPNETCORE)<br/>
+#### [Exemplos da aplicação em Asp Net Core](https://github.com/phoenixproject/aspnetcore/tree/master/_SON/_ASPNETCORE)<br/>
 
 #### Para uso do DotNet no VS Code
 
