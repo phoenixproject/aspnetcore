@@ -1,4 +1,4 @@
-# Asp Net Core (DotNet Core 5 ou Dot Net)
+## Asp Net Core (DotNet Core 5 ou Dot Net)
 
 ### [Exemplos do aplicativo em console](https://github.com/phoenixproject/aspnetcore/tree/master/_SON/_CONSOLE)<br/>
 
@@ -10,7 +10,7 @@
 - Instalar o Nuget Package Manager
 
 
-##### Configurações iniciais de um projeto Asp Net Core
+##### 01 - Configurações iniciais de um projeto Asp Net Core (classe Startup.cs)
 
 ```csharp
 
