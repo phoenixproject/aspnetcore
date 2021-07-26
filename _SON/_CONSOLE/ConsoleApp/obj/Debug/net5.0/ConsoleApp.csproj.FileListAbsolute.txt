@@ -1,0 +1,16 @@
+D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\DotNetCore\ConsoleApp\bin\Debug\net5.0\ConsoleApp.exe
+D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\DotNetCore\ConsoleApp\bin\Debug\net5.0\ConsoleApp.deps.json
+D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\DotNetCore\ConsoleApp\bin\Debug\net5.0\ConsoleApp.runtimeconfig.json
+D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\DotNetCore\ConsoleApp\bin\Debug\net5.0\ConsoleApp.runtimeconfig.dev.json
+D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\DotNetCore\ConsoleApp\bin\Debug\net5.0\ConsoleApp.dll
+D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\DotNetCore\ConsoleApp\bin\Debug\net5.0\ref\ConsoleApp.dll
+D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\DotNetCore\ConsoleApp\bin\Debug\net5.0\ConsoleApp.pdb
+D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\DotNetCore\ConsoleApp\obj\Debug\net5.0\ConsoleApp.csproj.AssemblyReference.cache
+D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\DotNetCore\ConsoleApp\obj\Debug\net5.0\ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\DotNetCore\ConsoleApp\obj\Debug\net5.0\ConsoleApp.AssemblyInfoInputs.cache
+D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\DotNetCore\ConsoleApp\obj\Debug\net5.0\ConsoleApp.AssemblyInfo.cs
+D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\DotNetCore\ConsoleApp\obj\Debug\net5.0\ConsoleApp.csproj.CoreCompileInputs.cache
+D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\DotNetCore\ConsoleApp\obj\Debug\net5.0\ConsoleApp.dll
+D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\DotNetCore\ConsoleApp\obj\Debug\net5.0\ref\ConsoleApp.dll
+D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\DotNetCore\ConsoleApp\obj\Debug\net5.0\ConsoleApp.pdb
+D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\DotNetCore\ConsoleApp\obj\Debug\net5.0\ConsoleApp.genruntimeconfig.cache
