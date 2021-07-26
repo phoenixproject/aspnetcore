@@ -12,81 +12,81 @@
 
 ##### Configurações iniciais de um projeto Asp Net Core
 
-```php
+```csharp
 
-	public class Startup
-    {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+public class Startup
+{
+	public Startup(IConfiguration configuration)
+	{
+		Configuration = configuration;
+	}
 
-        public IConfiguration Configuration { get; }
+	public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddRazorPages();
+	// This method gets called by the runtime. Use this method to add services to the container.
+	public void ConfigureServices(IServiceCollection services)
+	{
+		services.AddRazorPages();
 
-            // Helth Checks para monitoramento de balanceamento de carga
-            services.AddHealthChecks();
+		// Helth Checks para monitoramento de balanceamento de carga
+		services.AddHealthChecks();
 
-            // Adicionando compatibilidade de versão
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+		// Adicionando compatibilidade de versão
+		services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
-            // Para adicionar Sessão
-            services.AddDistributedMemoryCache();
-            services.AddSession(options =>
-            {
-                //options.IdleTimeout = TimeSpan.FromMinutes(100);
-                // Set a short timeout for easy testing.
-                options.IdleTimeout = TimeSpan.FromDays(14);
-                options.Cookie.HttpOnly = true;
-                // Make the session cookie essential
-                options.Cookie.IsEssential = true;
-            });
-        }
+		// Para adicionar Sessão
+		services.AddDistributedMemoryCache();
+		services.AddSession(options =>
+		{
+			//options.IdleTimeout = TimeSpan.FromMinutes(100);
+			// Set a short timeout for easy testing.
+			options.IdleTimeout = TimeSpan.FromDays(14);
+			options.Cookie.HttpOnly = true;
+			// Make the session cookie essential
+			options.Cookie.IsEssential = true;
+		});
+	}
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Error");
-            }
+	// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+	public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+	{
+		if (env.IsDevelopment())
+		{
+			app.UseDeveloperExceptionPage();
+		}
+		else
+		{
+			app.UseExceptionHandler("/Error");
+		}
 
-            app.UseStaticFiles();
+		app.UseStaticFiles();
 
-            // Uso de política de cookies
-            app.UseCookiePolicy();
+		// Uso de política de cookies
+		app.UseCookiePolicy();
 
-            app.UseRouting();
+		app.UseRouting();
 
-            app.UseAuthorization();
+		app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapRazorPages();
-            });
+		app.UseEndpoints(endpoints =>
+		{
+			endpoints.MapRazorPages();
+		});
 
-            // Adicionando URL para conferência de Health Check
-            app.UseHealthChecks("/health");
+		// Adicionando URL para conferência de Health Check
+		app.UseHealthChecks("/health");
 
-            // Para adicionar Sessão (Tem que ser antes de UseMvc ou UseEndpoints obrigatoriamente)
-            app.UseSession();
+		// Para adicionar Sessão (Tem que ser antes de UseMvc ou UseEndpoints obrigatoriamente)
+		app.UseSession();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-            });
-        }
-    }
+		app.UseEndpoints(endpoints =>
+		{
+			endpoints.MapControllerRoute(
+				name: "default",
+				pattern: "{controller=Home}/{action=Index}/{id?}");
+		});
+	}
+}
 ```
 
 ##### Para Conectar no banco de Dados SQL Server

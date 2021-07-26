@@ -1,4 +1,4 @@
-# Asp Net Core (DotNet Core 5 ou Dot Net)
+# Asp Net Core (Net Core ou Dot Net 5)
 
 ### [Exemplos do curso da Udemy de Asp Net Core 2.0](https://github.com/phoenixproject/aspnetcore/tree/master/_UDEMY)<br/>
 
