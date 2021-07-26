@@ -140,12 +140,14 @@ Na classe __Startup.cs__ existem dois tipos de configurações para serem feitas
 Este método é o lugar onde geralmente são configurados os serviços, algo como conexão com banco de dados.
 
 - Método __Configure__
+
   - Configuração __app.UseStaticFiles()__: define que arquivos estáticos como js, png, css, etc possam ser utilizados por sua aplicação;
   - Configuração __app.UseCookiePolicy()__: permite que sejam usados cookies em sua app;
   - Configuração __app.UseHttpsRedirection()__: permite que seja possível ser feito redirecionamento por https (caso esteja usando https);
   - Configuração __app.UseMvc()__: habilita o uso do MVC na aplicação, bem como sua configuração de controllers;
 
 - Método __Startup(IConfiguration configuration)__ 
+
 Este método inicial recebe o parâmetro __configuration__ que é o conteúdo do arquivo __appsettings.json__.
 
 ##### 03 - Configurações para Conectar no banco de Dados SQL Server
