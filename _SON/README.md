@@ -1,4 +1,5 @@
 ##### [Sintaxe básica de escrita e formatação no GitHub](https://docs.github.com/pt/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)<br/>
+##### [Criar e realçar blocos de código](https://docs.github.com/pt/github/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks)<br/>
 
 ## Asp Net Core (DotNet Core 5 ou Dot Net)
 
@@ -92,7 +93,7 @@ public class Startup
 
 ##### 02 - Estrutura de pastas e arquivos de um projeto Asp Net Core MVC
 
-####### Estrutura de pastas
+###### Estrutura de pastas
 
 - Diretório __bin__: é o local onde fica todo o seu projeto que foi compilado;
 - Diretório __Controllers__: é onde ficam todos os controladores da aplicação;
@@ -103,7 +104,7 @@ public class Startup
 - Diretório __wwwroot__: é o local onde ficam todos seus arquivos estáticos (js, css, etc);
 - Diretório __bin__: é o local onde fica todo o seu projeto que foi compilado;
 
-####### Estrutura de arquivos
+###### Estrutura de arquivos
 
 - Arquivo __appsettings.json__: é onde são definidas algumas configurações e inclusive de banco de dados;
 - Arquivo __Program.cs__: é o local onde está o método Main (primeiro método a ser executado na app);
@@ -132,9 +133,24 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 		});
 ```
 
+Na classe __Startup.cs__ existem dois tipos de configurações para serem feitas:
+
+- Método __ConfigureServices__
+
+Este método é o lugar onde geralmente são configurados os serviços, algo como conexão com banco de dados.
+
+- Método __Configure__
+  - Configuração __app.UseStaticFiles()__: define que arquivos estáticos como js, png, css, etc possam ser utilizados por sua aplicação;
+  - Configuração __app.UseCookiePolicy()__: permite que sejam usados cookies em sua app;
+  - Configuração __app.UseHttpsRedirection()__: permite que seja possível ser feito redirecionamento por https (caso esteja usando https);
+  - Configuração __app.UseMvc()__: habilita o uso do MVC na aplicação, bem como sua configuração de controllers;
+
+- Método __Startup(IConfiguration configuration)__ 
+Este método inicial recebe o parâmetro __configuration__ que é o conteúdo do arquivo __appsettings.json__.
+
 ##### 03 - Configurações para Conectar no banco de Dados SQL Server
 
-####### O que o código abaixo fará?
+###### O que o código abaixo fará?
 
 Caso deseje mapear seu banco de dados em formato de classe, abra o console do console do DotNet e execute o código abaixo.
 
