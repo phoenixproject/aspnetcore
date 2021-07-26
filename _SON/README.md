@@ -1,14 +1,15 @@
+##### [Sintaxe básica de escrita e formatação no GitHub](https://docs.github.com/pt/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)<br/>
+
 ## Asp Net Core (DotNet Core 5 ou Dot Net)
 
 ### [Exemplos do aplicativo em console](https://github.com/phoenixproject/aspnetcore/tree/master/_SON/_CONSOLE)<br/>
 
 ### [Exemplos do aplicado em Asp Net Core](https://github.com/phoenixproject/aspnetcore/tree/master/_SON/_ASPNETCORE)<br/>
 
-#### Para uso do VS Code
+#### Para uso do DotNet no VS Code
 
 - Instalar o plugin C#
 - Instalar o Nuget Package Manager
-
 
 ##### 01 - Configurações iniciais de um projeto Asp Net Core (classe Startup.cs)
 
@@ -89,8 +90,53 @@ public class Startup
 }
 ```
 
-##### Para Conectar no banco de Dados SQL Server
+##### 02 - Estrutura de pastas e arquivos de um projeto Asp Net Core MVC
 
+####### Estrutura de pastas
+
+- Diretório __bin__: é o local onde fica todo o seu projeto que foi compilado;
+- Diretório __Controllers__: é onde ficam todos os controladores da aplicação;
+- Diretório __Models__: é geralmente o local que usamos para referencias nossas classes de banco de dados;
+- Diretório __obj__: tem similaridade de significado com a pasta bin só que guarda compilados temporários;
+- Diretório __Properties__: Dentro deste diretório está o arquivo launchSettings.json que é usado para quando o app fica hospedado;
+- Diretório __Views__: é o onde ficam guardados todos os arquivos html de seu projeto;
+- Diretório __wwwroot__: é o local onde ficam todos seus arquivos estáticos (js, css, etc);
+- Diretório __bin__: é o local onde fica todo o seu projeto que foi compilado;
+
+####### Estrutura de arquivos
+
+- Arquivo __appsettings.json__: é onde são definidas algumas configurações e inclusive de banco de dados;
+- Arquivo __Program.cs__: é o local onde está o método Main (primeiro método a ser executado na app);
+- Arquivo __Startup.cs__: é o arquivo que guarda todas as configurações de seu aplicativo Asp Net Core;
+- Arquivo __aspcore.csproj__: é o local onde são informadas as dependências de seu projeto;
+
+###### Considerações sobre arquivos
+
+Na classe chamada __Program.cs__ mais especificamente no método abaixo, é o local onde será criado um servidor web.
+
+```csharp
+public static void Main(string[] args)
+{
+	CreateHostBuilder(args).Build().Run();
+}
+```
+
+E no método a seguir (na mesma classe) será criado um host web usando as configurações da classe __Startup.cs__ conforme informado.
+
+```csharp
+public static IHostBuilder CreateHostBuilder(string[] args) =>
+	Host.CreateDefaultBuilder(args)
+		.ConfigureWebHostDefaults(webBuilder =>
+		{
+			webBuilder.UseStartup<Startup>();
+		});
+```
+
+##### 03 - Configurações para Conectar no banco de Dados SQL Server
+
+####### O que o código abaixo fará?
+
+Caso deseje mapear seu banco de dados em formato de classe, abra o console do console do DotNet e execute o código abaixo.
 
 ```bash
 Scaffold-DbContext "Data Source=my_server_name;Initial Catalog=MYDATABASE;Integrated Security=False;Persist Security Info=False;
