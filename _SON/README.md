@@ -20,12 +20,6 @@
 
 ![Alt text](https://github.com/phoenixproject/aspnetcore/blob/master/_MEDIA/02_projeto_asp_net_core_mvc.png?raw=true "Projeto Asp Net Core MVC definindo a biblioteca")
 
-- Também é possível escolher um projeto do tipo Asp Net Core comum e definir a última versão da biblioteca .Net (no nosso caso por enquanto a 5), mas __aqui será utilizado apenas o opção MVC__.
-
-![Alt text](https://github.com/phoenixproject/aspnetcore/blob/master/_MEDIA/03_projeto_asp_net_core.png?raw=true "Projeto Asp Net Core Comum")
-
-![Alt text](https://github.com/phoenixproject/aspnetcore/blob/master/_MEDIA/04_projeto_asp_net_core.png?raw=true "Projeto Asp Net Core Comum definindo a biblioteca")
-
 ##### 01 - Configurações iniciais de um projeto Asp Net Core (classe Startup.cs)
 
 ```csharp
