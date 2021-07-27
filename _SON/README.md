@@ -191,7 +191,7 @@ Todo o método do controller (_Action_) tem seu método principal.
 
 - Para criarmos um novo controller 
 
-![Alt text](https://github.com/phoenixproject/aspnetcore/blob/master/_MEDIA/05_projeto_asp_net_core_criando_controller?raw=true "Controller novo")
+![Alt text](https://github.com/phoenixproject/aspnetcore/blob/master/_MEDIA/05_projeto_asp_net_core_criando_controller.png?raw=true "Controller novo")
 
 - Para definirmos o que poderá ser retornado em cada __Action__.
 
