@@ -26,6 +26,11 @@ namespace AspNetCoreMVC.Controllers
         {
             return View();
         }
+                
+        public IActionResult Mensagem()
+        {
+            return Content("Mensagem Teste de Conteúdo");
+        }
 
         // POST: AdminController/Create
         [HttpPost]

@@ -160,7 +160,7 @@ Este método é o lugar onde geralmente são configurados os serviços, algo com
 
 Este método inicial recebe o parâmetro __configuration__ que é o conteúdo do arquivo __appsettings.json__.
 
-##### 04 - Controllers
+##### 03 - Controllers
 
 - São responsáveis por toda lógica de fluxo de acesso da aplicação;
 - São uma das camadas da arquitetura MVC;
@@ -213,8 +213,157 @@ Todo o método do controller (_Action_) tem seu método principal.
 	retun Content("Hello World");
 	```
 
+##### 04 - Rotas
 
-##### 03 - Configurações para Conectar no banco de Dados SQL Server
+Rotas são basicamente caminhos para chegar aos controllers.
+
+Em __AdminController__ acesse a rota como: _http://localhost:12671/Admin/Mensagem_ (12671 é um número aleatório);
+
+```csharp
+	public IActionResult Mensagem()
+	{
+		return Content("Mensagem Teste de Conteúdo");
+	}
+```
+
+- **Mapeando Ações (Actions)**
+
+- Alterando rotas padrões
+
+Da forma como está abaixo além do mapeamento automático do AspNet Core ter sido alterado você terá de colocar um novo caminho, algo como isso: _http://localhost:12671/painel/admin_ e as Actions podem ser mapeadas com verbos HTTP;
+
+```csharp
+[Route("painel/admin")]
+public class AdminController : Controller
+{
+	[HttpGet("")]			
+	public IActionResult Mensagem()
+	{
+		return Content("Mensagem Teste de Conteúdo");
+	}
+}
+```
+- Adicionando mais rotas para a mesma action
+
+Também pode ser acessada da forma abaixo com mais de um nome de rota para para a mesma ação;
+
+```csharp
+[Route("painel/admin")]
+public class AdminController : Controller
+{
+	[HttpGet("teste")]		
+	[HttpGet("")]			
+	public IActionResult Mensagem()
+	{
+		return Content("Mensagem Teste de Conteúdo");
+	}
+	
+	[HttpGet("givetitle")]			
+	public IActionResult Titulo()
+	{
+		return Content("Mensagem Teste de Título");
+	}
+}
+```
+
+- Definindo parâmetros para rotas
+
+É possível também chamar a rota passando parâmetros da forma abaixo para acessar da seguinte forma: _http://localhost:12671/principal/Miguel_
+
+```csharp
+[Route("painel/admin")]
+public class AdminController : Controller
+{	
+	[HttpGet("principal/{}")]			
+	public IActionResult Index(string nome)
+	{
+		return Content("Olá " + nome);
+	}
+}
+```
+
+- Alterando parâmetros de rotas
+
+Chamando a rota passando parâmetros da forma abaixo para acessar da seguinte forma: _http://localhost:12671/principal/10_
+
+```csharp
+[Route("painel/admin")]
+public class AdminController : Controller
+{	
+	[HttpGet("principal/{numero}")]			
+	public IActionResult Index(int numero)
+	{
+		return Content("O valor é " + numero);
+	}
+}
+```
+
+- Definindo tipos para parâmetros de Actions
+
+Chamando a rota passando parâmetros da forma abaixo para acessar da seguinte forma: _http://localhost:12671/principal/10_ e restringindo o parâmetro pelo tipo.
+
+```csharp
+[Route("painel/admin")]
+public class AdminController : Controller
+{	
+	[HttpGet("principal/{numero:int}")]			
+	public IActionResult Index(int numero)
+	{
+		return Content("O valor é " + numero);
+	}
+}
+```
+
+- Tornando parâmetros opcionais para Actions.
+
+Chamando a rota passando parâmetros da forma abaixo para acessar da seguinte forma: _http://localhost:12671/principal/10_ e restringindo o parâmetro pelo tipo.
+
+```csharp
+[Route("painel/admin")]
+public class AdminController : Controller
+{	
+	[HttpGet("principal/{numero:int?}")]			
+	public IActionResult Index(int numero)
+	{
+		return Content("O valor é " + numero);
+	}
+}
+```
+
+- Adicionando mais de um parâmetro
+
+Chamando a rota passando parâmetros da forma abaixo para acessar da seguinte forma: _http://localhost:12671/principal/10/Miguel_ e restringindo o parâmetro pelo tipo.
+
+```csharp
+[Route("painel/admin")]
+public class AdminController : Controller
+{	
+	[HttpGet("principal/{numero:int?}/{nome}")]			
+	public IActionResult Index(int numero, string nome)
+	{
+		return Content("O valor é " + numero + " e o nome é: " + nome);
+	}
+}
+```
+
+- Passando parâmetros com Query String
+
+Chamando a rota passando parâmetros com query string da forma abaixo para acessar da seguinte forma: _http://localhost:12671/principal/nome=Miguel_ e restringindo o parâmetro pelo tipo.
+
+```csharp
+[Route("painel/admin")]
+public class AdminController : Controller
+{	
+	[HttpGet("principal/{numero:int?}/{nome}")]			
+	public IActionResult Index()
+	{
+		string nome = Request.Query["nome"];
+		return Content("O nome é: " + nome);
+	}
+}
+```
+
+##### 05 - Configurações para Conectar no banco de Dados SQL Server
 
 ###### O que o código abaixo fará?
 
