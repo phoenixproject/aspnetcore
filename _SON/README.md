@@ -20,7 +20,7 @@
 
 ![Alt text](https://github.com/phoenixproject/aspnetcore/blob/master/_MEDIA/02_projeto_asp_net_core_mvc.png?raw=true "Projeto Asp Net Core MVC definindo a biblioteca")
 
-##### 01 - Configurações iniciais de um projeto Asp Net Core (classe Startup.cs)
+#### 01 - Configurações iniciais de um projeto Asp Net Core (classe Startup.cs)
 
 ```csharp
 
@@ -101,7 +101,7 @@ public class Startup
 }
 ```
 
-##### 02 - Estrutura de pastas e arquivos de um projeto Asp Net Core MVC
+#### 02 - Estrutura de pastas e arquivos de um projeto Asp Net Core MVC
 
 ###### Estrutura de pastas
 
@@ -160,7 +160,7 @@ Este método é o lugar onde geralmente são configurados os serviços, algo com
 
 Este método inicial recebe o parâmetro __configuration__ que é o conteúdo do arquivo __appsettings.json__.
 
-##### 03 - Controllers
+#### 03 - Controllers
 
 - São responsáveis por toda lógica de fluxo de acesso da aplicação;
 - São uma das camadas da arquitetura MVC;
@@ -213,7 +213,7 @@ Todo o método do controller (_Action_) tem seu método principal.
 	retun Content("Hello World");
 	```
 
-##### 04 - Rotas
+#### 04 - Rotas
 
 Rotas são basicamente caminhos para chegar aos controllers.
 
@@ -363,7 +363,7 @@ public class AdminController : Controller
 }
 ```
 
-##### 06 - Views
+#### 06 - Views
 
 As views servem para renderizar o que é feito num controller. Dentro do diretório __Views__ deve existir um diretório com o mesmo nome de seu __controller__ e dentro deste diretório, páginas __cshtml__ com os mesmos nomes de suas __Actions__. Por exemplo:
 
@@ -418,7 +418,7 @@ View _Testando.cshtml_
 
 Para executar a página: _http://localhost:12671/Teste/Testando_.
 
-##### 05 - Passando informações (variáveis) para serem exibidas na view
+#### 07 - Passando informações (variáveis) para serem exibidas na view
 
 Classe _TesteController.cs_
 
@@ -495,7 +495,7 @@ namespace AspNetCoreMVC.Controllers
 }
 ```
 
-##### 06 - Configurações para Conectar no banco de Dados SQL Server
+#### 08 - Configurações para Conectar no banco de Dados SQL Server
 
 ###### O que o código abaixo fará?
 
