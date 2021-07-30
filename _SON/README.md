@@ -495,7 +495,47 @@ namespace AspNetCoreMVC.Controllers
 }
 ```
 
-#### 07 - Configurações para Conectar no banco de Dados SQL Server
+#### 07 - Passando dados para formulários básicos
+
+View _form.cshtml_
+
+```
+<form action="/painel/admin/dados" method="post">
+	<input type="email" name="email" />
+	<input type="text" name="nome" />
+	<button>Enviar</button>
+</form>
+```
+
+Controller _AdminController_
+
+```
+[Route("painel/admin")]
+    public class AdminController : Controller
+    {
+        [HttpGet("form")]
+        public IActionResult form()
+        {
+            return View();
+        }
+
+        [HttpPost("dados")]
+        public IActionResult dados()
+        {
+            StringValues nome;
+            StringValues email;
+
+            Request.Form.TryGetValue("nome", out nome);
+            Request.Form.TryGetValue("email", out email);
+
+            return Content("Formulário enviado" + nome + " " + email);
+        }
+    }
+```
+
+Para executar a página: _http://localhost:12671/painel/admin/form_. 
+
+#### 08 - Configurações para Conectar no banco de Dados SQL Server
 
 ###### O que o código abaixo fará?
 

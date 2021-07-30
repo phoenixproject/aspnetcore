@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace AspNetCoreMVC.Controllers
 {
+    [Route("painel/admin")]
     public class AdminController : Controller
     {
         // GET: AdminController
@@ -87,6 +89,24 @@ namespace AspNetCoreMVC.Controllers
             {
                 return View();
             }
+        }
+
+        [HttpGet("form")]
+        public IActionResult form()
+        {
+            return View();
+        }
+
+        [HttpPost("dados")]
+        public IActionResult dados()
+        {
+            StringValues nome;
+            StringValues email;
+
+            Request.Form.TryGetValue("nome", out nome);
+            Request.Form.TryGetValue("email", out email);
+
+            return Content("Formulário enviado" + nome + " " + email);
         }
     }
 }
