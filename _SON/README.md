@@ -363,7 +363,139 @@ public class AdminController : Controller
 }
 ```
 
-##### 05 - Configurações para Conectar no banco de Dados SQL Server
+##### 06 - Views
+
+As views servem para renderizar o que é feito num controller. Dentro do diretório __Views__ deve existir um diretório com o mesmo nome de seu __controller__ e dentro deste diretório, páginas __cshtml__ com os mesmos nomes de suas __Actions__. Por exemplo:
+
+Classe _TesteController.cs_
+
+```
+namespace AspNetCoreMVC.Controllers
+{
+    public class TesteController : Controller
+    {
+        [HttpGet("view")]
+        public ActionResult Testando()
+        {
+            return View();
+        }
+    }
+}
+```
+
+View _Testando.cshtml_
+
+```
+<h1>Testando minha View</h1>
+
+```
+
+Para executar a página: _http://localhost:12671/view_.
+
+__Ou__
+
+Classe _TesteController.cs_
+
+```
+namespace AspNetCoreMVC.Controllers
+{
+    public class TesteController : Controller
+    {        
+        public ActionResult Testando()
+        {
+            return View();
+        }
+    }
+}
+```
+
+View _Testando.cshtml_
+
+```
+<h1>Testando minha View</h1>
+
+```
+
+Para executar a página: _http://localhost:12671/Teste/Testando_.
+
+##### 05 - Passando informações (variáveis) para serem exibidas na view
+
+Classe _TesteController.cs_
+
+```
+namespace AspNetCoreMVC.Controllers
+{
+    public class TesteController : Controller
+    {
+        [HttpGet("view")]
+        public ActionResult Testando()
+        {
+			viewData["helloWorld"] = false;
+            return View();
+        }
+    }
+}
+```
+
+View _Testando.cshtml_
+
+```
+<h1>Testando minha View  @ViewData["helloWorld"]</h1>
+
+```
+
+Para executar a página: _http://localhost:12671/view_. 
+
+__Ou__
+
+Classe _TesteController.cs_
+
+```
+namespace AspNetCoreMVC.Controllers
+{
+    public class TesteController : Controller
+    {
+        [HttpGet("view")]
+        public ActionResult Testando()
+        {
+			viewData["helloWorld"] = false;
+            return View();
+        }
+    }
+}
+```
+
+View _Testando.cshtml_
+
+```
+@if((bool)ViewData["helloWorld"]){
+	<h1>Testando minha View</h1>
+}
+else{
+	<h1>Teste down!</h1>
+}
+```
+
+Para executar a página: _http://localhost:12671/view_. 
+
+__Observação:__
+
+Também é possível retornar uma outra view que esteja dentro da pasta do seu controller no diretório __Views__ se ela for informada no método.
+
+```
+namespace AspNetCoreMVC.Controllers
+{
+    public class TesteController : Controller
+    {        
+        public ActionResult Testando()
+        {			
+            return View("outraview");
+        }
+    }
+}
+```
+
+##### 06 - Configurações para Conectar no banco de Dados SQL Server
 
 ###### O que o código abaixo fará?
 
