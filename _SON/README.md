@@ -363,7 +363,7 @@ public class AdminController : Controller
 }
 ```
 
-#### 06 - Views
+#### 05 - Views
 
 As views servem para renderizar o que é feito num controller. Dentro do diretório __Views__ deve existir um diretório com o mesmo nome de seu __controller__ e dentro deste diretório, páginas __cshtml__ com os mesmos nomes de suas __Actions__. Por exemplo:
 
@@ -418,7 +418,7 @@ View _Testando.cshtml_
 
 Para executar a página: _http://localhost:12671/Teste/Testando_.
 
-#### 07 - Passando informações (variáveis) para serem exibidas na view
+#### 06 - Passando informações (variáveis) para serem exibidas na view
 
 Classe _TesteController.cs_
 
@@ -495,7 +495,7 @@ namespace AspNetCoreMVC.Controllers
 }
 ```
 
-#### 08 - Configurações para Conectar no banco de Dados SQL Server
+#### 07 - Configurações para Conectar no banco de Dados SQL Server
 
 ###### O que o código abaixo fará?
 
