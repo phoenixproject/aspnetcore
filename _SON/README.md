@@ -535,7 +535,41 @@ Controller _AdminController_
 
 Para executar a página: _http://localhost:12671/painel/admin/form_. 
 
-#### 08 - Configurações para Conectar no banco de Dados SQL Server
+#### 08 - Trabalhando com Models
+
+Para se se ter um model é possível inserir definições para certos atributos da classe no intuito de trabalhar melhor
+
+```
+    public class Teste
+    {
+        [Required]
+        [MaxLength(60)]
+        public string Nome { get; set; }
+
+        [Required]
+        public DateTime DataNascimento { get; set; }
+    }
+```
+
+Você também pode criar um Controller do tipo MVC
+
+![Alt text](https://github.com/phoenixproject/aspnetcore/blob/master/_MEDIA/06_projeto_asp_net_core_novo_controller_mvc.png?raw=true "Novo Controller MVC")
+
+E escolher integrar uma classe já com View e Entity Framewok também na modalidade MVC, embora isso possa ser feito manualmente mais tarde.
+
+![Alt text](https://github.com/phoenixproject/aspnetcore/blob/master/_MEDIA/08_projeto_asp_net_core_novo_controller_mvc_com_model.png?raw=true "Nova Classe e View na modalidade com Entity Framework")
+
+**Ou**
+
+Criar um Controller do tipo API
+
+![Alt text](https://github.com/phoenixproject/aspnetcore/blob/master/_MEDIA/07_projeto_asp_net_core_novo_controller_api.png?raw=true "Novo Controller API")
+
+E escolher integrar uma classe já com Entity Framewok também na modalidade API, também embora isso possa ser feito manualmente mais tarde.
+
+![Alt text](https://github.com/phoenixproject/aspnetcore/blob/master/_MEDIA/09_projeto_asp_net_core_novo_controller_api_com_model.png?raw=true "Nova Classe na modalidade com Entity Framework")
+
+#### 09 - Configurações para Conectar no banco de Dados SQL Server
 
 ###### O que o código abaixo fará?
 
