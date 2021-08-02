@@ -369,7 +369,7 @@ As views servem para renderizar o que é feito num controller. Dentro do diretó
 
 Classe _TesteController.cs_
 
-```
+```csharp
 namespace AspNetCoreMVC.Controllers
 {
     public class TesteController : Controller
@@ -385,9 +385,8 @@ namespace AspNetCoreMVC.Controllers
 
 View _Testando.cshtml_
 
-```
+```html
 <h1>Testando minha View</h1>
-
 ```
 
 Para executar a página: _http://localhost:12671/view_.
@@ -396,7 +395,7 @@ __Ou__
 
 Classe _TesteController.cs_
 
-```
+```csharp
 namespace AspNetCoreMVC.Controllers
 {
     public class TesteController : Controller
@@ -411,7 +410,7 @@ namespace AspNetCoreMVC.Controllers
 
 View _Testando.cshtml_
 
-```
+```html
 <h1>Testando minha View</h1>
 
 ```
@@ -422,7 +421,7 @@ Para executar a página: _http://localhost:12671/Teste/Testando_.
 
 Classe _TesteController.cs_
 
-```
+```csharp
 namespace AspNetCoreMVC.Controllers
 {
     public class TesteController : Controller
@@ -439,7 +438,7 @@ namespace AspNetCoreMVC.Controllers
 
 View _Testando.cshtml_
 
-```
+```html
 <h1>Testando minha View  @ViewData["helloWorld"]</h1>
 
 ```
@@ -450,7 +449,7 @@ __Ou__
 
 Classe _TesteController.cs_
 
-```
+```csharp
 namespace AspNetCoreMVC.Controllers
 {
     public class TesteController : Controller
@@ -467,7 +466,7 @@ namespace AspNetCoreMVC.Controllers
 
 View _Testando.cshtml_
 
-```
+```csharp
 @if((bool)ViewData["helloWorld"]){
 	<h1>Testando minha View</h1>
 }
@@ -482,7 +481,7 @@ __Observação:__
 
 Também é possível retornar uma outra view que esteja dentro da pasta do seu controller no diretório __Views__ se ela for informada no método.
 
-```
+```csharp
 namespace AspNetCoreMVC.Controllers
 {
     public class TesteController : Controller
@@ -499,7 +498,7 @@ namespace AspNetCoreMVC.Controllers
 
 View _form.cshtml_
 
-```
+```html
 <form action="/painel/admin/dados" method="post">
 	<input type="email" name="email" />
 	<input type="text" name="nome" />
@@ -509,7 +508,7 @@ View _form.cshtml_
 
 Controller _AdminController_
 
-```
+```csharp
 [Route("painel/admin")]
     public class AdminController : Controller
     {
@@ -539,7 +538,7 @@ Para executar a página: _http://localhost:12671/painel/admin/form_.
 
 Para se se ter um model é possível inserir definições para certos atributos da classe no intuito de trabalhar melhor
 
-```
+```csharp
     public class Teste
     {
         [Required]
@@ -568,6 +567,35 @@ Criar um Controller do tipo API
 E escolher integrar uma classe já com Entity Framewok também na modalidade API, também embora isso possa ser feito manualmente mais tarde.
 
 ![Alt text](https://github.com/phoenixproject/aspnetcore/blob/master/_MEDIA/09_projeto_asp_net_core_novo_controller_api_com_model.png?raw=true "Nova Classe na modalidade com Entity Framework")
+
+**Para exibir o conteúdo de uma View junto um layout (laoyut principal no caso)**
+
+```csharp
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p>
+	Teste de Layout
+</p>
+```
+
+Ao executar a página: _http://localhost:12671/Teste_ será chamado o método Index() abaixo do controller _Teste_. 
+
+```csharp
+	public ActionResult Index()
+	{
+		return View();
+	}
+```
+
+E o resultado esperado é este:
+
+![Alt text](10_projeto_asp_net_core_nova_view_mvc.png?raw=true "Nova View")
+
 
 #### 09 - Configurações para Conectar no banco de Dados SQL Server
 

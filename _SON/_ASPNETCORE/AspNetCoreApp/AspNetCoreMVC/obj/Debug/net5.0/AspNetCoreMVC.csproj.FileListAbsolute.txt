@@ -40,3 +40,4 @@ D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\_ASPNETCORE\AspNetCoreApp\AspN
 D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\_ASPNETCORE\AspNetCoreApp\AspNetCoreMVC\obj\Debug\net5.0\AspNetCoreMVC.csproj.CopyComplete
 D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\_ASPNETCORE\AspNetCoreApp\AspNetCoreMVC\obj\Debug\net5.0\Razor\Views\Teste\Testando.cshtml.g.cs
 D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\_ASPNETCORE\AspNetCoreApp\AspNetCoreMVC\obj\Debug\net5.0\Razor\Views\Admin\form.cshtml.g.cs
+D:\_SISTEMAS\_DOTNETCORE\_PESSOAL\aspnetcore\_SON\_ASPNETCORE\AspNetCoreApp\AspNetCoreMVC\obj\Debug\net5.0\Razor\Views\Teste\Index.cshtml.g.cs
