@@ -594,7 +594,7 @@ Ao executar a página: _http://localhost:12671/Teste_ será chamado o método In
 
 E o resultado esperado é este:
 
-![Alt text](10_projeto_asp_net_core_nova_view_mvc.png?raw=true "Nova View")
+![Alt text](https://github.com/phoenixproject/aspnetcore/blob/master/_MEDIA/10_projeto_asp_net_core_nova_view_mvc.png?raw=true "Nova View")
 
 
 #### 09 - Configurações para Conectar no banco de Dados SQL Server
