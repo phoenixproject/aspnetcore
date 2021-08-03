@@ -568,6 +568,8 @@ E escolher integrar uma classe já com Entity Framewok também na modalidade API
 
 ![Alt text](https://github.com/phoenixproject/aspnetcore/blob/master/_MEDIA/09_projeto_asp_net_core_novo_controller_api_com_model.png?raw=true "Nova Classe na modalidade com Entity Framework")
 
+#### 09 - Exibição da informações em Views passando argumentos ou não
+
 **Para exibir o conteúdo de uma View junto um layout (laoyut principal no caso)**
 
 ```csharp
@@ -596,8 +598,268 @@ E o resultado esperado é este:
 
 ![Alt text](https://github.com/phoenixproject/aspnetcore/blob/master/_MEDIA/10_projeto_asp_net_core_nova_view_mvc.png?raw=true "Nova View")
 
+**Para exibir o conteúdo de uma View junto um layout nulo**
 
-#### 09 - Configurações para Conectar no banco de Dados SQL Server
+```csharp
+@{
+	Layout = null;
+}
+
+<p>AnotherAction view</p>
+```
+
+Ao executar a página: _http://localhost:12671/Teste/AnotherAction_ será chamado o método AnotherAction(). 
+
+```csharp
+	public ActionResult AnotherAction()
+	{
+		return View();
+	}
+```
+
+**Para exibir o conteúdo de uma View a partir de determinada Action**
+
+```csharp
+@{
+	Layout = null;
+}
+
+Some View
+```
+
+Ao executar a página: _http://localhost:12671/Teste/AnotherView_ será chamado o método AnotherAction(). 
+
+```csharp
+		public IActionResult AnotherView()
+		{
+			return View("SomeView");
+		}
+```
+
+**Para exibir um parâmetro em uma View vindo de determinada Action**
+
+```csharp
+@model string
+
+@{
+	Layout = null;
+}
+
+ViewWithParameter view
+
+<hr />
+
+@Model
+```
+
+Ao executar a página: _http://localhost:12671/Teste/ViewWithParameter_ será chamado o método AnotherAction(). 
+
+```csharp
+	public IActionResult ViewWithParameter()
+	{
+		string SomeString = "I am a string";
+
+		return View("ViewWithParameter", SomeString);
+	}
+```
+
+**Para exibir parâmetros em uma View vindo de determinada Action**
+
+```csharp
+@model string
+@{
+	Layout = null;
+}
+
+PassingData view
+
+<hr />
+
+@ViewBag.Fruit
+
+<br />
+
+@ViewData["Color"]
+
+<br />
+
+@TempData["Number"]
+```
+
+Ao executar a página: _http://localhost:12671/Teste/PassingData_ será chamado o método PassingData(). 
+
+```csharp
+	public IActionResult PassingData()
+	{
+		ViewBag.Fruit = "Apples";
+		ViewData["Color"] = "Red";
+
+		TempData["Number"] = 5;
+
+		return View();
+	}
+```
+
+**Para exibir parâmetros em uma View por Query String**
+
+```csharp
+@model string
+
+@{
+	Layout = null;
+}
+
+QueryString view
+
+<hr />
+
+@ViewBag.Name
+
+<br />
+
+@ViewBag.LastName
+```
+
+Ao executar a página: _localhost:12671/Teste/QueryString?name=Jonh&lastname=Jonhson_ será chamado o método QueryString(). 
+
+```csharp
+	// localhost:12671/Teste/QueryString?name=Jonh&lastname=Jonhson
+	public IActionResult QueryString(string name, string lastname)
+	{
+		ViewBag.Name = name;
+
+		ViewBag.Lastname = lastname;
+
+		return View();
+	}
+```
+
+**Para redirecionar uma Action**
+
+Ao executar a página: _localhost:12671/Teste/Redirect2_ será chamado o método QueryString(). 
+
+```csharp
+	public RedirectResult Redirect2()
+	{
+		return Redirect("http://www.google.com");
+	}
+```
+
+**Para Redirecionar para outro controller e ainda passando nome da Action e nome do Controller**
+
+```csharp
+@{
+	Layout = null;
+}
+
+PassingData view
+
+<hr />
+
+@ViewBag.Fruit
+
+<br />
+
+@ViewData["Color"]
+
+<br />
+
+@TempData["Number"]
+```
+
+Ao executar a página: _localhost:12671/Teste/Redirect3_ será chamado chamada a view PassingData. 
+
+```csharp
+	// Redirecionando para o outro controller
+	public IActionResult Redirect3()
+	{
+		return RedirectToAction("PassingData", "AnotherController");
+	}
+```
+
+**Para Redirecionar para outro controller e ainda passando nome da Action e nome do Controller**
+
+```csharp
+@{
+	Layout = null;
+}
+
+PassingData view
+
+<hr />
+
+@ViewBag.Fruit
+
+<br />
+
+@ViewData["Color"]
+
+<br />
+
+@TempData["Number"]
+```
+
+Ao executar a página: _localhost:12671/Teste/Redirect3_ será chamado chamada a view PassingData. 
+
+```csharp
+	// Redirecionando para o outro controller
+	public IActionResult Redirect3()
+	{
+		return RedirectToAction("PassingData", "AnotherController");
+	}
+```
+
+**Para redirecionar para outra Action do mesmo Controller**
+
+```csharp
+@model string
+
+@{
+	Layout = null;
+}
+
+PassingData view
+
+<hr />
+
+@ViewBag.Fruit
+
+<br />
+
+@ViewData["Color"]
+
+<br />
+
+@TempData["Number"]
+```
+
+Ao executar a página: _localhost:12671/Teste/Redirect_ será chamada a view PassingData. 
+
+```csharp
+	public IActionResult Redirect()
+	{
+		return RedirectToAction("PassingData");
+	}
+```
+
+**Para exibir variáveis ViewData na view a partir de um controller renomeado**
+
+```html
+<h1>Testando minha View @ViewData["helloWorld"]</h1>
+```
+
+Ao executar a página: _localhost:12671/view_ será chamada a view Testando. 
+
+```csharp
+	[HttpGet("view")]
+	public ActionResult Testando()
+	{
+		ViewData["helloWorld"] = false;
+		return View();
+	}
+```
+
+#### 10 - Configurações para Conectar no banco de Dados SQL Server
 
 ###### O que o código abaixo fará?
 

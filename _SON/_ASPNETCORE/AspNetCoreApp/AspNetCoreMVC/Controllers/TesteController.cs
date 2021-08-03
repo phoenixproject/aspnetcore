@@ -15,76 +15,66 @@ namespace AspNetCoreMVC.Controllers
             return View();
         }
 
-        // GET: TesteController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
+		public IActionResult AnotherAction()
+		{
+			return View();
+		}
 
-        // GET: TesteController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
+		public IActionResult AnotherView()
+		{
+			return View("SomeView");
+		}
 
-        // POST: TesteController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+		public IActionResult ViewWithParameter()
+		{
+			string SomeString = "I am a string";
 
-        // GET: TesteController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
+			return View("ViewWithParameter", SomeString);
+		}
 
-        // POST: TesteController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+		public IActionResult PassingData()
+		{
+			ViewBag.Fruit = "Apples";
+			ViewData["Color"] = "Red";
 
-        // GET: TesteController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
+			TempData["Number"] = 5;
 
-        // POST: TesteController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+			return View();
+		}
 
-        [HttpGet("view")]
+		// localhost:59025/home/QueryString?name=Jonh&lastname=Jonhson
+		public IActionResult QueryString(string name, string lastname)
+		{
+			ViewBag.Name = name;
+
+			ViewBag.Lastname = lastname;
+
+			return View();
+		}
+
+		public RedirectResult Redirect2()
+		{
+			return Redirect("http://www.google.com");
+		}
+
+		// Redirecionando para o outro controller com nome da Action e nome do Controller
+		public IActionResult Redirect3()
+		{
+			return RedirectToAction("PassingData", "AnotherController");
+		}
+
+		// Redirecionando para o outro controller passando um id
+		public IActionResult Redirect4()
+		{
+			return RedirectToAction("PassingData", "AnotherController", new { id = 1 });
+		}
+
+		public IActionResult Redirect()
+		{
+			return RedirectToAction("PassingData");
+		}
+
+		[HttpGet("view")]
         public ActionResult Testando()
         {
             ViewData["helloWorld"] = false;
