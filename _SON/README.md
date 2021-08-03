@@ -568,7 +568,7 @@ E escolher integrar uma classe já com Entity Framewok também na modalidade API
 
 ![Alt text](https://github.com/phoenixproject/aspnetcore/blob/master/_MEDIA/09_projeto_asp_net_core_novo_controller_api_com_model.png?raw=true "Nova Classe na modalidade com Entity Framework")
 
-#### 09 - Exibição da informações em Views passando argumentos ou não
+#### ![#1589F0]09 - Exibição da informações em Views passando argumentos ou não`#1589F0`
 
 **Para exibir o conteúdo de uma View junto um layout (laoyut principal no caso)**
 
