@@ -859,7 +859,9 @@ Ao executar a página: _localhost:12671/view_ será chamada a view Testando.
 	}
 ```
 
-#### 10 - Configurações para Conectar no banco de Dados SQL Server
+#### 10 - Bind
+
+#### 11 - Configurações para Conectar no banco de Dados SQL Server
 
 ###### O que o código abaixo fará?
 
